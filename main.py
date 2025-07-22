@@ -41,6 +41,10 @@ def main():
             if a.collides_with(p1):
                 print("Game over!")
                 return
+            for s in shots:
+                if a.collides_with(s):
+                    s.kill()
+                    a.kill()
 
         screen.fill("black")
         for d in drawable:
